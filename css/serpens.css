@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css?family=Sarpanch:900");
+
+$rotationAmt: -12;
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+#wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 20vmin;
+  margin: 0;
+  padding: 30px;
+  color: #1d9099;
+  text-shadow: 1vmin 1vmin 0 #e79c10, -1vmin -1vmin 0 #d53a33;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 50px;
+  transform: rotate(350deg);
+  line-height: 80%;
+}
+
+/*
+Layout spillknapp forside
+*/
+#play {
+  margin-top: 1.2em;
+  background-color: #1d9099;
+  color: #e79c10;
+  border-color: #d53a33;
+  width: 6em;
+  height: 2.3em;
+  font-size: 2.8em;
+  border-radius: 0.2em;
+  border-width: 0.08em;
+  z-index: 100;
+  position: relative;
+}
+
+/*
+Teksten til spillknapp forside
+*/
+#playv2 {
+  text-decoration: none;
+  color: #e79c10;
+}
+
+/*
+Layout startknapp spillside
+*/
+.play {
+  margin-top: 1.2em;
+  background-color: #1d9099;
+  color: #e79c10;
+  border-color: #d53a33;
+  width: 5em;
+  height: 2em;
+  font-size: 2.6em;
+  border-radius: 0.2em;
+  border-width: 0.08em;
+  z-index: 100;
+  position: relative;
+}
+
+.playB {
+  margin-top: 1.2em;
+  background-color: #1d9099;
+  color: #e79c10;
+  border-color: #d53a33;
+  width: 3em;
+  height: 2em;
+  font-size: 1.5em;
+  border-radius: 0.2em;
+  border-width: 0.08em;
+  z-index: 100;
+  position: relative;
+}
+
+/* Teksten til startknapp spillside */
+.playv2 {
+  text-decoration: none;
+  color: #e79c10;
+}
+
+#background {
+  background-image: radial-gradient(circle, #333333, #222222);
+}
+
+img {
+  height: 2.7em;
+  width: 13em;
+}
+
+/* Info i navbar*/
+#info {
+  color: #e79c10;
+}
+.navbar {
+  margin-bottom: 0;
+}
+
+/* Rules i navbar*/
+#rules {
+  color: #d53a33;
+}
+
+/* Developers i navbar */
+#develop {
+  color: #1d9099;
+}
+
+#active {
+  background-color: black;
+}
+
+/* Tekstboksene under Info og Rules */
+.boks {
+  width: 40vw;
+  height: 43vh;
+  background-color: white;
+  margin-top: 2em;
+  border-style: groove;
+  border-color: black;
+  border-width: 0.3em;
+  border-radius: 1em;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+}
+
+#overskrift3 {
+  transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 20vmin;
+  margin: 0;
+  padding: 0.2em;
+  color: #d53a33;
+  text-shadow: 1vmin 1vmin 0 black, -1vmin -1vmin 0 black;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0.35em;
+  transform: rotate(350deg);
+  line-height: 80%;
+}
+
+#overskrift2 {
+  transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 20vmin;
+  margin: 0;
+  padding: 0.2em;
+  color: #e79c10;
+  text-shadow: 1vmin 1vmin 0 black, -1vmin -1vmin 0 black;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0.35em;
+  transform: rotate(350deg);
+  line-height: 80%;
+}
+
+/* Tekst i teksboks under Developers */
+#gutta {
+  font-size: calc(1.1vh + 1.1vw);
+  text-align: center;
+  list-style: none;
+  margin-right: 1.5em;
+}
+
+#overskrift4 {
+  transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 20vmin;
+  margin: 0;
+  padding: 30px;
+  color: #1d9099;
+  text-shadow: 1vmin 1vmin 0 black, -1vmin -1vmin 0 black;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 50px;
+  transform: rotate(350deg);
+  line-height: 80%;
+}
+
+.navBackColor:hover {
+  background-color: black;
+}
+
+/* Bevegelse når musepeker er på play-knapp forside. Har både webkit-keyrfames og keyframes for å sikre støtte på flest mulig nettlesere */
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* Bevegelse når musepeker er på play-knapp forside. Har både webkit-keyrfames og keyframes for å sikre støtte på flest mulig nettlesere */
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+#play:hover {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.navText {
+  font-family: sans-serif;
+}
+
+.usynlig {
+  display: none;
+  font-size: 0.6em;
+  padding: 0.7em;
+  text-align: center;
+  background-color: #1d9099;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+}
+
+.synlig {
+  opacity: 1;
+  padding: 5;
+  margin-top: 0.5em;
+  font-size: 0.95em;
+}
+
+.synlig:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.sound {
+  background-color: #1d9099;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 100;
+}
+#soundBtnPosition {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  width: 15em;
+}
+#knapp2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#knapp1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Red background */
+.sound:hover {
+  background-color: #d53a33;
+  color: white;
+}
+.sound:active {
+  color: #e79c10;
+}
+
+#myCanvas {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.regelliste {
+  padding-top: 1.5em;
+  font-size: calc(0.8vh + 0.8vw);
+}
+
+.regelliste2 {
+  font-size: calc(0.8vh + 0.8vw);
+}
+
+#score {
+  text-align: center;
+  font-style: italic;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+#informasjon {
+  line-height: 1.5em;
+  margin-top: 1.5em;
+
+  font-size: calc(0.9vh + 0.9vw);
+}
+
+#foot {
+  background-color: #222222;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  height: 2em;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+  font-size: 0.8vw;
+}
+
+.bodyL {
+  margin-top: 50px;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.score {
+  padding-left: 50px;
+  margin-top: 50px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#canvas {
+  background: #666666;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  #canvas {
+    width: 42vw;
+  }
+}
+
+.playerBox {
+  background-color: #fffafa;
+  border-style: none;
+}
+
+.scorebackgr {
+  background-color: #fffafa;
+}

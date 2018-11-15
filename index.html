@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Serpens Mortus - First Page</title>
+  <link href="attach/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/serpens.css">
+
+
+</head>
+
+<body id="background" onload="init();">
+
+  <!--
+Navbar fra bootstrap, navbar kollapser med siden
+-->
+  <nav class="navbar navbar-inverse" id="bar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <a href="index.html">
+          <img src="attach/logo.png" alt="Logo">
+        </a>
+
+
+
+      </div>
+
+      <!--
+Navbar attributter
+-->
+      <ul class="nav navbar-nav">
+        <li class="navBackColor"><a class="navText" id="info" href="info.html">Info</a></li>
+        <li class="navBackColor"><a class="navText" id="rules" href="rules.html">Instructions</a></li>
+        <li class="navBackColor"><a class="navText" id="develop" href="devs.html">Developers</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <div id="wrapper">
+
+    <h1>Serpens <br>Mortus</h1>
+
+
+    <center><button onclick="window.location.href='game.html'" class="btn btn-primary btn-lg" id="play" name="button"><a id="playv2">Play</a></button></center>
+
+
+    <div id="soundBtnPosition">
+      <audio loop id="myAudio">
+        <source src="attach/bgmusikk.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="playAudio()" id="knapp1" type="button" class="sound fa fa-play"> Sound</button>
+      <button onclick="pauseAudio()" id="knapp2" type="button" class="sound fa fa-pause"> No sound</button>
+    </div>
+
+
+
+
+
+
+    <div id="bakgrunn">
+      <canvas id=myCanvas></canvas>
+    </div>
+
+
+
+
+  </div>
+
+  <Footer id="foot">
+    <p> System-requirements: PC with keyboard. Browsers: Chrome, FireFox, Safari, Microsoft Edge </p>
+  </Footer>
+
+  <script src="js/serpens.js" charset="utf-8"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
